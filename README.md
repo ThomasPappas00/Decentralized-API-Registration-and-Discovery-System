@@ -15,6 +15,7 @@ A decentralized API Directory is proposed, that can be deployed in any Ethereum 
 
 <p align="center"> <img src="https://github.com/ThomasPappas00/Decentralized-API-Registration-and-Discovery-System/assets/75483971/3095189a-bc32-418a-9c33-12cb262ab132" width="600"/> </p>
 <br> <br>
+
 **Architecture of the system and four types of interactions**
 <p align="center"><img src="https://github.com/ThomasPappas00/Decentralized-API-Registration-and-Discovery-System/assets/75483971/ebd88fa2-2c94-4395-8935-6dde4c18c08c" width="600"/></p> 
 
