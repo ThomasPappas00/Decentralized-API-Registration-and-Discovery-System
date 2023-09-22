@@ -11,7 +11,7 @@ Layer 3 platforms abstract the sensor and networking layers from the end-user ap
 A decentralized API Directory is proposed, that can be deployed in any Ethereum Virtual Machine (EVM) compatible public or private blockchain. This API Directory can be used as a common place for smart-city IoT platforms to publish their API specifications, formulated on the OpenAPI specification standard, and for end-user applications to discover them based on spatial location and desired smart-city category. Furthermore, taking advantage of the inherit financial nature of the Ethereum blockchain, a proposition is implemented to extend this solution to a payable version (where API consumers pay a fee to obtain the producers’ APIs) and therefore unfold a new smart city API marketplace.
 
 --- 
-<p style="text-align: center;"><strong>Problem example with two IoT stacks</strong></p>
+**<p style="text-align: center;">Problem example with two IoT stacks</p>**
 
 <p align="center"> <img src="https://github.com/ThomasPappas00/Decentralized-API-Registration-and-Discovery-System/assets/75483971/3095189a-bc32-418a-9c33-12cb262ab132" width="600"/> </p>
 
