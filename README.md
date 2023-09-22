@@ -10,7 +10,7 @@ A decentralized API Directory is proposed, that can be deployed in any Ethereum 
 
 **Problem example with two IoT stacks**
 
-<img src="https://github.com/ThomasPappas00/Decentralized-API-Registration-and-Discovery-System/assets/75483971/3095189a-bc32-418a-9c33-12cb262ab132" width="200"/> 
+<img src="https://github.com/ThomasPappas00/Decentralized-API-Registration-and-Discovery-System/assets/75483971/3095189a-bc32-418a-9c33-12cb262ab132" width="800"/> 
 
 
 **Architecture of the system and four types of interactions**
