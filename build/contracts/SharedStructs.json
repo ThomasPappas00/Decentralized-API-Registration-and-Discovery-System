@@ -1,0 +1,1610 @@
+{
+  "contractName": "SharedStructs",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Thomas A. Pappas\",\"kind\":\"dev\",\"methods\":{},\"title\":\"The necessary structures to define an API, based on Swagger\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SharedStructs.sol\":\"SharedStructs\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SharedStructs.sol\":{\"keccak256\":\"0xaf6e3c8c5b15289f7e44aa9657417c226925dd20cbcf5ce8ce93b5cd8980eb67\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://18900a4703e57c996b3abec18c10a1e31837e8ecb801de1c0469129063ccb1b6\",\"dweb:/ipfs/QmQqMhbnBytFMrZpTmvYGPgj4Q5E3hpQr1PFpCkorrzmo6\"]}},\"version\":1}",
+  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220472486a94f796bce0fa4484fe375cf260f61dc420edd10ca1d94f3651012fc2f64736f6c63430008110033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220472486a94f796bce0fa4484fe375cf260f61dc420edd10ca1d94f3651012fc2f64736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "170:1713:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "170:1713:2:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.17;\r\n\r\n/// @title The necessary structures to define an API, based on Swagger\r\n/// @author Thomas A. Pappas\r\nlibrary SharedStructs {\r\n    struct Info{\r\n        string version;\r\n        string title;\r\n        string description;\r\n        string termsOfService;\r\n        Contact contact;\r\n        Licence license;\r\n    }\r\n\r\n    struct Contact {\r\n        string name;\r\n        string url;\r\n        string email;\r\n    }\r\n\r\n    struct Licence {\r\n        string name;\r\n        string url;\r\n    }\r\n\r\n    struct Server {\r\n        string url;\r\n        string description;\r\n        ServerVariableObject variables;\r\n    }\r\n\r\n    struct ServerVariableObject {\r\n        string name;\r\n        string[] server_enum;\r\n        string description;\r\n        string server_default;\r\n    }\r\n\r\n    struct OAuth_scopes {\r\n        string name;\r\n        string description;\r\n    }\r\n\r\n    struct OAuth_flow {\r\n        string flow_type;\r\n        string authorizationUrl;\r\n        string tokenUrl;\r\n        string refreshUrl;\r\n        OAuth_scopes scopes;\r\n    }\r\n\r\n    struct SecurityScheme {\r\n        string security_type;\r\n        string description;\r\n        string name;\r\n        string security_in;\r\n        string scheme;\r\n        string bearerFormat;\r\n        OAuth_flow flows;\r\n        string openIdConnectUrl; \r\n    }\r\n\r\n    struct Security {\r\n        string name;\r\n        SharedStructs.SecurityScheme mechanism;\r\n    }\r\n\r\n    struct Tags {\r\n        string name;\r\n        string description;\r\n        ExternalDocs externalDocs;\r\n    }\r\n\r\n    struct ExternalDocs {\r\n        string description;\r\n        string url;\r\n    }\r\n\r\n    struct Coverage {\r\n        Coordinate north;\r\n        Coordinate south;\r\n        Coordinate east;\r\n        Coordinate west;\r\n    }\r\n\r\n    struct Coordinate {\r\n        int256 lat;\r\n        int256 lng;\r\n    }\r\n\r\n}\r\n\r\n",
+  "sourcePath": "C:\\Users\\Tomas\\Documents\\ETH-dev\\ApiDirectory\\contracts\\SharedStructs.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SharedStructs.sol",
+    "exportedSymbols": {
+      "SharedStructs": [
+        795
+      ]
+    },
+    "id": 796,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 676,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:24:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SharedStructs",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 677,
+          "nodeType": "StructuredDocumentation",
+          "src": "68:102:2",
+          "text": "@title The necessary structures to define an API, based on Swagger\n @author Thomas A. Pappas"
+        },
+        "fullyImplemented": true,
+        "id": 795,
+        "linearizedBaseContracts": [
+          795
+        ],
+        "name": "SharedStructs",
+        "nameLocation": "178:13:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SharedStructs.Info",
+            "id": 692,
+            "members": [
+              {
+                "constant": false,
+                "id": 679,
+                "mutability": "mutable",
+                "name": "version",
+                "nameLocation": "228:7:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "221:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 678,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 681,
+                "mutability": "mutable",
+                "name": "title",
+                "nameLocation": "253:5:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "246:12:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 680,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "246:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 683,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "276:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "269:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 682,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "269:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 685,
+                "mutability": "mutable",
+                "name": "termsOfService",
+                "nameLocation": "305:14:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "298:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 684,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "298:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 688,
+                "mutability": "mutable",
+                "name": "contact",
+                "nameLocation": "338:7:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "330:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Contact_$699_storage_ptr",
+                  "typeString": "struct SharedStructs.Contact"
+                },
+                "typeName": {
+                  "id": 687,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 686,
+                    "name": "Contact",
+                    "nameLocations": [
+                      "330:7:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 699,
+                    "src": "330:7:2"
+                  },
+                  "referencedDeclaration": 699,
+                  "src": "330:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Contact_$699_storage_ptr",
+                    "typeString": "struct SharedStructs.Contact"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 691,
+                "mutability": "mutable",
+                "name": "license",
+                "nameLocation": "364:7:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 692,
+                "src": "356:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Licence_$704_storage_ptr",
+                  "typeString": "struct SharedStructs.Licence"
+                },
+                "typeName": {
+                  "id": 690,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 689,
+                    "name": "Licence",
+                    "nameLocations": [
+                      "356:7:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 704,
+                    "src": "356:7:2"
+                  },
+                  "referencedDeclaration": 704,
+                  "src": "356:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Licence_$704_storage_ptr",
+                    "typeString": "struct SharedStructs.Licence"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Info",
+            "nameLocation": "206:4:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "199:180:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Contact",
+            "id": 699,
+            "members": [
+              {
+                "constant": false,
+                "id": 694,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "420:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 699,
+                "src": "413:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 693,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "413:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 696,
+                "mutability": "mutable",
+                "name": "url",
+                "nameLocation": "442:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 699,
+                "src": "435:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 695,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "435:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 698,
+                "mutability": "mutable",
+                "name": "email",
+                "nameLocation": "463:5:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 699,
+                "src": "456:12:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 697,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "456:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Contact",
+            "nameLocation": "394:7:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "387:89:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Licence",
+            "id": 704,
+            "members": [
+              {
+                "constant": false,
+                "id": 701,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "517:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 704,
+                "src": "510:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 700,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "510:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 703,
+                "mutability": "mutable",
+                "name": "url",
+                "nameLocation": "539:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 704,
+                "src": "532:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 702,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "532:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Licence",
+            "nameLocation": "491:7:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "484:66:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Server",
+            "id": 712,
+            "members": [
+              {
+                "constant": false,
+                "id": 706,
+                "mutability": "mutable",
+                "name": "url",
+                "nameLocation": "590:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 712,
+                "src": "583:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 705,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "583:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 708,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "611:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 712,
+                "src": "604:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 707,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "604:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 711,
+                "mutability": "mutable",
+                "name": "variables",
+                "nameLocation": "654:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 712,
+                "src": "633:30:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ServerVariableObject_$722_storage_ptr",
+                  "typeString": "struct SharedStructs.ServerVariableObject"
+                },
+                "typeName": {
+                  "id": 710,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 709,
+                    "name": "ServerVariableObject",
+                    "nameLocations": [
+                      "633:20:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 722,
+                    "src": "633:20:2"
+                  },
+                  "referencedDeclaration": 722,
+                  "src": "633:20:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ServerVariableObject_$722_storage_ptr",
+                    "typeString": "struct SharedStructs.ServerVariableObject"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Server",
+            "nameLocation": "565:6:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "558:113:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.ServerVariableObject",
+            "id": 722,
+            "members": [
+              {
+                "constant": false,
+                "id": 714,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "725:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 722,
+                "src": "718:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 713,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "718:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 717,
+                "mutability": "mutable",
+                "name": "server_enum",
+                "nameLocation": "749:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 722,
+                "src": "740:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 715,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "740:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 716,
+                  "nodeType": "ArrayTypeName",
+                  "src": "740:8:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 719,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "778:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 722,
+                "src": "771:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 718,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "771:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 721,
+                "mutability": "mutable",
+                "name": "server_default",
+                "nameLocation": "807:14:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 722,
+                "src": "800:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 720,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "800:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ServerVariableObject",
+            "nameLocation": "686:20:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "679:150:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.OAuth_scopes",
+            "id": 727,
+            "members": [
+              {
+                "constant": false,
+                "id": 724,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "875:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 727,
+                "src": "868:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 723,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "868:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 726,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "897:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 727,
+                "src": "890:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 725,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "890:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "OAuth_scopes",
+            "nameLocation": "844:12:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "837:79:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.OAuth_flow",
+            "id": 739,
+            "members": [
+              {
+                "constant": false,
+                "id": 729,
+                "mutability": "mutable",
+                "name": "flow_type",
+                "nameLocation": "960:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 739,
+                "src": "953:16:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 728,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "953:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 731,
+                "mutability": "mutable",
+                "name": "authorizationUrl",
+                "nameLocation": "987:16:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 739,
+                "src": "980:23:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 730,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "980:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 733,
+                "mutability": "mutable",
+                "name": "tokenUrl",
+                "nameLocation": "1021:8:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 739,
+                "src": "1014:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 732,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1014:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 735,
+                "mutability": "mutable",
+                "name": "refreshUrl",
+                "nameLocation": "1047:10:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 739,
+                "src": "1040:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 734,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1040:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 738,
+                "mutability": "mutable",
+                "name": "scopes",
+                "nameLocation": "1081:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 739,
+                "src": "1068:19:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OAuth_scopes_$727_storage_ptr",
+                  "typeString": "struct SharedStructs.OAuth_scopes"
+                },
+                "typeName": {
+                  "id": 737,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 736,
+                    "name": "OAuth_scopes",
+                    "nameLocations": [
+                      "1068:12:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 727,
+                    "src": "1068:12:2"
+                  },
+                  "referencedDeclaration": 727,
+                  "src": "1068:12:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_OAuth_scopes_$727_storage_ptr",
+                    "typeString": "struct SharedStructs.OAuth_scopes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "OAuth_flow",
+            "nameLocation": "931:10:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "924:171:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.SecurityScheme",
+            "id": 757,
+            "members": [
+              {
+                "constant": false,
+                "id": 741,
+                "mutability": "mutable",
+                "name": "security_type",
+                "nameLocation": "1143:13:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1136:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 740,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1136:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 743,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "1174:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1167:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 742,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1167:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 745,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "1203:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1196:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 744,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1196:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 747,
+                "mutability": "mutable",
+                "name": "security_in",
+                "nameLocation": "1225:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1218:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 746,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1218:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 749,
+                "mutability": "mutable",
+                "name": "scheme",
+                "nameLocation": "1254:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1247:13:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 748,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1247:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 751,
+                "mutability": "mutable",
+                "name": "bearerFormat",
+                "nameLocation": "1278:12:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1271:19:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 750,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1271:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 754,
+                "mutability": "mutable",
+                "name": "flows",
+                "nameLocation": "1312:5:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1301:16:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OAuth_flow_$739_storage_ptr",
+                  "typeString": "struct SharedStructs.OAuth_flow"
+                },
+                "typeName": {
+                  "id": 753,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 752,
+                    "name": "OAuth_flow",
+                    "nameLocations": [
+                      "1301:10:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 739,
+                    "src": "1301:10:2"
+                  },
+                  "referencedDeclaration": 739,
+                  "src": "1301:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_OAuth_flow_$739_storage_ptr",
+                    "typeString": "struct SharedStructs.OAuth_flow"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 756,
+                "mutability": "mutable",
+                "name": "openIdConnectUrl",
+                "nameLocation": "1335:16:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 757,
+                "src": "1328:23:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 755,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1328:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SecurityScheme",
+            "nameLocation": "1110:14:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1103:257:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Security",
+            "id": 763,
+            "members": [
+              {
+                "constant": false,
+                "id": 759,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "1402:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 763,
+                "src": "1395:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 758,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1395:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 762,
+                "mutability": "mutable",
+                "name": "mechanism",
+                "nameLocation": "1446:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 763,
+                "src": "1417:38:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_SecurityScheme_$757_storage_ptr",
+                  "typeString": "struct SharedStructs.SecurityScheme"
+                },
+                "typeName": {
+                  "id": 761,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 760,
+                    "name": "SharedStructs.SecurityScheme",
+                    "nameLocations": [
+                      "1417:13:2",
+                      "1431:14:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 757,
+                    "src": "1417:28:2"
+                  },
+                  "referencedDeclaration": 757,
+                  "src": "1417:28:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SecurityScheme_$757_storage_ptr",
+                    "typeString": "struct SharedStructs.SecurityScheme"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Security",
+            "nameLocation": "1375:8:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1368:95:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Tags",
+            "id": 771,
+            "members": [
+              {
+                "constant": false,
+                "id": 765,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "1501:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 771,
+                "src": "1494:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 764,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1494:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 767,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "1523:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 771,
+                "src": "1516:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 766,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1516:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 770,
+                "mutability": "mutable",
+                "name": "externalDocs",
+                "nameLocation": "1558:12:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 771,
+                "src": "1545:25:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ExternalDocs_$776_storage_ptr",
+                  "typeString": "struct SharedStructs.ExternalDocs"
+                },
+                "typeName": {
+                  "id": 769,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 768,
+                    "name": "ExternalDocs",
+                    "nameLocations": [
+                      "1545:12:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 776,
+                    "src": "1545:12:2"
+                  },
+                  "referencedDeclaration": 776,
+                  "src": "1545:12:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ExternalDocs_$776_storage_ptr",
+                    "typeString": "struct SharedStructs.ExternalDocs"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tags",
+            "nameLocation": "1478:4:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1471:107:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.ExternalDocs",
+            "id": 776,
+            "members": [
+              {
+                "constant": false,
+                "id": 773,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "1624:11:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "1617:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 772,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1617:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 775,
+                "mutability": "mutable",
+                "name": "url",
+                "nameLocation": "1653:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "1646:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 774,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1646:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ExternalDocs",
+            "nameLocation": "1593:12:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1586:78:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Coverage",
+            "id": 789,
+            "members": [
+              {
+                "constant": false,
+                "id": 779,
+                "mutability": "mutable",
+                "name": "north",
+                "nameLocation": "1710:5:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 789,
+                "src": "1699:16:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                  "typeString": "struct SharedStructs.Coordinate"
+                },
+                "typeName": {
+                  "id": 778,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 777,
+                    "name": "Coordinate",
+                    "nameLocations": [
+                      "1699:10:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 794,
+                    "src": "1699:10:2"
+                  },
+                  "referencedDeclaration": 794,
+                  "src": "1699:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                    "typeString": "struct SharedStructs.Coordinate"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 782,
+                "mutability": "mutable",
+                "name": "south",
+                "nameLocation": "1737:5:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 789,
+                "src": "1726:16:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                  "typeString": "struct SharedStructs.Coordinate"
+                },
+                "typeName": {
+                  "id": 781,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 780,
+                    "name": "Coordinate",
+                    "nameLocations": [
+                      "1726:10:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 794,
+                    "src": "1726:10:2"
+                  },
+                  "referencedDeclaration": 794,
+                  "src": "1726:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                    "typeString": "struct SharedStructs.Coordinate"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 785,
+                "mutability": "mutable",
+                "name": "east",
+                "nameLocation": "1764:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 789,
+                "src": "1753:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                  "typeString": "struct SharedStructs.Coordinate"
+                },
+                "typeName": {
+                  "id": 784,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 783,
+                    "name": "Coordinate",
+                    "nameLocations": [
+                      "1753:10:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 794,
+                    "src": "1753:10:2"
+                  },
+                  "referencedDeclaration": 794,
+                  "src": "1753:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                    "typeString": "struct SharedStructs.Coordinate"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 788,
+                "mutability": "mutable",
+                "name": "west",
+                "nameLocation": "1790:4:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 789,
+                "src": "1779:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                  "typeString": "struct SharedStructs.Coordinate"
+                },
+                "typeName": {
+                  "id": 787,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 786,
+                    "name": "Coordinate",
+                    "nameLocations": [
+                      "1779:10:2"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 794,
+                    "src": "1779:10:2"
+                  },
+                  "referencedDeclaration": 794,
+                  "src": "1779:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Coordinate_$794_storage_ptr",
+                    "typeString": "struct SharedStructs.Coordinate"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Coverage",
+            "nameLocation": "1679:8:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1672:130:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SharedStructs.Coordinate",
+            "id": 794,
+            "members": [
+              {
+                "constant": false,
+                "id": 791,
+                "mutability": "mutable",
+                "name": "lat",
+                "nameLocation": "1846:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 794,
+                "src": "1839:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 790,
+                  "name": "int256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1839:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 793,
+                "mutability": "mutable",
+                "name": "lng",
+                "nameLocation": "1867:3:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 794,
+                "src": "1860:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 792,
+                  "name": "int256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1860:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Coordinate",
+            "nameLocation": "1817:10:2",
+            "nodeType": "StructDefinition",
+            "scope": 795,
+            "src": "1810:68:2",
+            "visibility": "public"
+          }
+        ],
+        "scope": 796,
+        "src": "170:1713:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:1847:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x42507cFF668f63ecA00B6650EB529957562f22c2",
+      "transactionHash": "0x770481cc48b393b383bf3fec077d305a79667b4654a0ef67c39a1625ca9e15a2"
+    }
+  },
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-02-12T20:53:26.541Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "author": "Thomas A. Pappas",
+    "kind": "dev",
+    "methods": {},
+    "title": "The necessary structures to define an API, based on Swagger",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
