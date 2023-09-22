@@ -24,7 +24,7 @@ A decentralized API Directory is proposed, that can be deployed in any Ethereum 
 [Thesis link](https://hdl.handle.net/10889/24723)
 
 ## Instructions
-Start a private local Ethereum blockchain instance (127.0.0.1:8545) with tools like Ganache and add the _truffle-config.js_ file to the workspace. Run _$truffle migrate_ in the root folder to compile the smart contracts _(ApiDirectory.sol, Functionality.sol, SharedStructs.sol)_ and deploy them on the blockchain. Run _node producer.js_ in the _/scripts_ folder and provide an API specification. Run _node consumer.js_ in the _/scripts_ folder and provide a x,y location (lat, lon) and a smart-city category (Parking, etc.). A single or multiple OpenAPI specifications are returned in JSON format. Now, the Layer 4 application can onboard on the desired Layer 3 platform based the API specification. 
+Start a private local Ethereum blockchain instance (127.0.0.1:8545) with tools like Ganache and add the _truffle-config.js_ file to the workspace. Run _$ truffle migrate_ in the root folder to compile the smart contracts _(ApiDirectory.sol, Functionality.sol, SharedStructs.sol)_ and deploy them on the blockchain. Run _$ node producer.js_ in the _/scripts_ folder and provide an API specification. Run _$ node consumer.js_ in the _/scripts_ folder and provide a x,y location (lat, lon) and a smart-city category (Parking, etc.). A single or multiple OpenAPI specifications are returned in JSON format. Now, the Layer 4 application can onboard on the desired Layer 3 platform based the API specification. 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
